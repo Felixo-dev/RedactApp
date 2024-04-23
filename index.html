@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redactr APP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="redactr">
+        <h1 class="title">REDACTR</h1>
+        <p class="intro-text">
+          ...scramble some words from a body of text content
+        </p>
+      </div>
+
+      <form class="form-container" id="myForm">
+        <div class="form-content">
+          <label for="content" class="content-label">Enter your content:</label>
+          <textarea
+            id="content"
+            cols="35"
+            rows="5"
+            class="input-content-textarea"
+          ></textarea>
+        </div>
+
+        <div class="form-content">
+          <label for="redactWords" class="redacted-label"
+            >Words to be redacted ( separated by spaces):</label
+          >
+          <input type="text" id="redactWords" class="redacted-input" />
+        </div>
+
+        <div class="form-content">
+          <label for="replacement" class="replacement-label"
+            >Choose a replacement:</label
+          >
+          <select name="replacement" id="replacement" class="select-option">
+            <option value="****">Asterisks</option>
+            <option value="????">Question Mark</option>
+            <option value="----">Dashes</option>
+            <option value="____">Underscores</option>
+            <option value="REDACTED">Custom Word (e.g."REDACTED")</option>
+          </select>
+        </div>
+
+        <button class="redact-button" type="button" onclick="redactContent()">
+          Redact Now
+        </button>
+
+        <button class="reset-button" type="button" onclick="resetForm()">
+          Reset Form
+        </button>
+      </form>
+
+      <div class="redactContent" id="redactedContent">
+        <h3 class="redacted-heading">REDACTED CONTENT</h3>
+        <p id="redactedText" class="redactedText"></p>
+        <p class="status-title">Status:</p>
+        <p id="stats" class="status-display">
+          Words scanned:
+          <span id="wordsScanned" class="counts">0</span>
+          ,Words redacted:
+          <span id="wordsRedacted" class="counts">0</span>
+          ,Characters redacted:
+          <span id="charactersRedacted" class="counts">0</span>
+          ,Time taken:
+          <span id="timeTaken" class="counts">0</span>
+          seconds
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

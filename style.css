@@ -1,0 +1,143 @@
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding: 25px 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(173, 165, 165, 0.5);
+}
+
+.intro-text {
+  text-align: center;
+  color: #0056b3;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-label {
+  color: rgb(122, 116, 116);
+  font-weight: 700;
+}
+
+.input-content-textarea {
+  border: 1px solid #b8d4f1;
+  border-radius: 5px;
+  height: 45px;
+  padding: 10px;
+}
+
+.redacted-label {
+  color: rgb(122, 116, 116);
+  font-weight: 700;
+}
+
+.redacted-input {
+  border: 1px solid #b8d4f1;
+  border-radius: 5px;
+  height: 45px;
+  padding: 10px;
+}
+
+.replacement-label {
+  color: rgb(122, 116, 116);
+  font-weight: 700;
+}
+
+.select-option {
+  border: 1px solid #b8d4f1;
+  border-radius: 5px;
+  height: 45px;
+  padding: 10px;
+}
+
+.redact-button {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  height: 30px;
+  border: none;
+}
+.redact-button:hover {
+  background-color: #0056b3;
+  transition: background-color 0.3s;
+}
+
+.reset-button {
+  background-color: grey;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  cursor: pointer;
+}
+.reset-button:hover {
+  background-color: rgb(72, 88, 83);
+  transition: background-color 0.3s;
+}
+
+.redactContent {
+  width: 100%;
+}
+
+.redacted-heading {
+  text-align: left;
+  color: rgb(122, 116, 116);
+  font-weight: 700;
+}
+
+.status-title {
+  font-size: 15px;
+  color: rgb(122, 116, 116);
+  font-weight: 700;
+}
+
+.status-display {
+  font-size: 13px;
+  color: rgb(122, 116, 116);
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 900px;
+    border-radius: 6px;
+    padding: 30px 50px;
+    overflow: auto;
+    height: 540px;
+  }
+}
